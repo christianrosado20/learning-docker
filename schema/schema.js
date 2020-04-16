@@ -166,15 +166,6 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args) {
                 return User.find({});
             }
-        },
-
-        // Removing Team
-        removeTeam: {
-            type: TeamType,
-            args: { id: { type: GraphQLID }},
-            resolve(parent, args) {
-                return Team.delete(args.id);
-            }
         }
     }
 });
