@@ -173,7 +173,7 @@ const RootQuery = new GraphQLObjectType({
             type: TeamType,
             args: { id: { type: GraphQLID }},
             resolve(parent, args) {
-                return Team.findByIdAndDelete(args.id);
+                return Team.delete(args.id);
             }
         }
     }
