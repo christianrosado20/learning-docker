@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 const MONGO_CONFIG = {
-  URI: 'mongodb+srv://christianrosado:Naruto900*@lpr-vgnlk.mongodb.net/Prototype?retryWrites=true&w=majority'
+  URI: 'mongodb://mongo:27017/docker-ludis'
 }
 
 // connect to mlab database
