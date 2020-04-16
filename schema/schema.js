@@ -270,6 +270,15 @@ const Mutation = new GraphQLObjectType({
                 });
                 return user.save();
             }
+        },
+
+        // Removing Team
+        removeTeam: {
+            type: TeamType,
+            args: { id: { type: GraphQLID }},
+            resolve(parent, args) {
+                return Team.findByIdAndDelete(args.id);
+            }
         }
     }
 });
